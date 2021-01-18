@@ -9,7 +9,7 @@ using namespace sf;
 using namespace std;
 
 int board_Opponent[N][N];
-RenderWindow window(VideoMode(1000, 600), "Sea Battle");//конструктор окна
+RenderWindow window(VideoMode(1000, 600), "Sea Battle");
 Vector2f centerWindow = Vector2f(window.getSize().x / 2, window.getSize().y / 2);
 
 int cellBoardX, cellBoardY;
@@ -70,7 +70,7 @@ void shootComputer(Game& player1) {
 		if (player1.board[cellY][cellX] == 1) { player1.board[cellY][cellX] = 3; EXIT = true; }
 	}
 }
-int win(Game& player1, Game& player2) { //Если на каком-то поле нет кораблей - true, иначе - false.
+int win(Game& player1, Game& player2) {  ГЇГ®Г«ГҐ 
 	int win1 = 0, win2 = 0;
 	
 	for (int i = 0; i < N; i++) {
@@ -97,7 +97,7 @@ int win(Game& player1, Game& player2) { //Если на каком-то поле нет кораблей - t
 int main() {
 
 	window.setFramerateLimit(60);
-	font.loadFromFile("C:\\Users\\diana\\OneDrive\\Изображения\\ГУАП\\Курсач ТП\\Project1\\comic.ttf");
+	font.loadFromFile("C:\\Users\\diana\\OneDrive\\Г€Г§Г®ГЎГ°Г Г¦ГҐГ­ГЁГї\\ГѓГ“ГЂГЏ\\ГЉГіГ°Г±Г Г· Г’ГЏ\\Project1\\comic.ttf");
 
 	Titletxt.setFillColor(Color::Black);
 	Wintxt.setFillColor(Color::Red);
@@ -122,7 +122,7 @@ int main() {
 	}
 
 	while (window.isOpen()) {
-		//конструктор обработчика событий
+		//ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г° Г®ГЎГ°Г ГЎГ®ГІГ·ГЁГЄГ  Г±Г®ГЎГ»ГІГЁГ©
 		Event e;
 		while (window.pollEvent(e)) {
 			if (e.type == Event::Closed || Keyboard::isKeyPressed(Keyboard::Escape)) { window.close(); }
@@ -152,7 +152,7 @@ int main() {
 			window.clear(Color::White);
 			if (player1.win) Wintxt.setString("You won!"); else if (player2.win) Wintxt.setString("You lost!");
 			Wintxt.setPosition(centerWindow.x - Wintxt.getGlobalBounds().width / 2, centerWindow.y - Wintxt.getGlobalBounds().height / 2);
-			//getGlobalBounds() - эта функция возвращает границы спрайта в глобальной системе координат 2D-мира
+			
 			window.draw(Wintxt);
 			window.display();
 			Sleep(3000);
